@@ -1,3 +1,6 @@
+h3{
+  word-wrap: break-word;
+}
 .quizContainer {
   border: 1px solid gray;
   border-radius: 5px;
@@ -7,14 +10,14 @@
   margin-top: 20px;
 }
 
-.answer {
+.multiple_Choice {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.answer>p {
-  border: 1px solid black;
+.multiple_Choice>p {
+  border: 1px solid rgb(51, 50, 50);
   background-color: whitesmoke;
   width: 300px;
   padding: 10px;
@@ -22,7 +25,7 @@
   text-align: center;
 }
 
-.answer>p:hover {
+.multiple_Choice>p:hover {
   background-color: black;
   color: white;
 }
@@ -35,13 +38,34 @@
 .logo>img {
   width: 200px;
 }
-.btn{
+
+.btn {
   text-align: center;
 }
 
-.btn > button{
+.btn>button {
   background-color: black;
   color: white;
   font-size: 20px;
   padding: 10px;
+}
+
+.finalResult{
+  border: 1px solid gray;
+  width: 500px;
+  margin: auto;
+  text-align: center;
+}
+.finalResult > .btn{
+  background-color: red;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+}
+.score{
+  display: flex;
+  justify-content: space-between;
+}
+.MuiLinearProgress-root{
+  height: 15px !important;
 }

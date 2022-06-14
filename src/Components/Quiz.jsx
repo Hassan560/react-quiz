@@ -1,48 +1,41 @@
 import React from 'react'
+import { useState } from 'react';
 
 import '../App.css';
 
 // data
-import Data from '../Data';
+import Question from '../Data'
+
+import FinalResult from './FinalResult';
+import MultipleChoice from './MultipleChoice';
+import { LinearProgress } from '@material-ui/core';
 
 const Quiz = () => {
 
-    const nextQuestion = () => {
-        alert('hello world')
-    }
+    const [finalResult, setFinalResult] = useState(false)
+    const [score, setScore] = useState(0)
+    const [currentQuestion, setCurrentQuestion] = useState(0)
 
     return (
-        <div className='quizContainer'>
-            <h3>Question 1 of 20</h3>
-            {
-                Data.map((elem, index) => (
-                    <p key={index}>{elem.category}</p>
-                ))
-            }
-            <div>
-                {
-                    Data.map((elem)=> (
-                        <h4>{elem.question}</h4>
-                    ))
-                }
-            </div>
-            <div className='answer'>
-                {
-                    Data.map((elem) => (
-
-                        <p>{elem.question}</p>
-                    )
-                    )
-                }
-                <p>question 1</p>
-                <p>question 1</p>
-                <p>question 1</p>
-                <p>question 1</p>
-            </div>
-            <div className='btn'>
-                <button onClick={nextQuestion}>Next question</button>
-            </div>
-        </div>
+        <>
+            {finalResult ? (
+                <FinalResult setScore={setScore} score={score} setFinalResult={setFinalResult} setCurrentQuestion={setCurrentQuestion} />
+            ) : (
+                <div className='quizContainer'>
+                    <h3>Question {currentQuestion + 1} of {Question.length}</h3>
+                    <p>Category: {Question[currentQuestion].category.replace(/%20|%26|%3A/g, " ")}</p>
+                    <div className='Question'>
+                        <h3>{Question[currentQuestion].question.replace(/%20|%22|%27|%3F|%2C/g, " ")}?</h3>
+                    </div>
+                    <MultipleChoice currentQuestion={currentQuestion} setCurrentQuestion={setCurrentQuestion} setScore={setScore} score={score} setFinalResult={setFinalResult} />
+                    <div className='score'>
+                        <p>Score: {(score / Question.length) * 100}%</p>
+                        <p>Max Score: 100%</p>
+                    </div>
+                    <LinearProgress variant="determinate" value={(score / Question.length) * 100} />
+                </div>
+            )}
+        </>
     )
 }
 
