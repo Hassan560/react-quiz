@@ -12,9 +12,9 @@ const Question =
             //     "Guy%20of%20Gisbourne"
             // ],
             "options": [
-                { id: 1, text: "Dirk%20the%20Daring", isCorrect: true },
-                { id: 2, text: "Arthur", isCorrect: false },
-                { id: 3, text: "Sir%20Toby%20Belch", isCorrect: false },
+                { id: 1, text: "Arthur", isCorrect: false },
+                { id: 2, text: "Sir%20Toby%20Belch", isCorrect: false },
+                { id: 3, text: "Dirk%20the%20Daring", isCorrect: true },
                 { id: 4, text: "Guy%20of%20Gisbourne", isCorrect: false },
             ]
         },
@@ -44,8 +44,8 @@ const Question =
             // "correct_answer": "Bilius",
             // "incorrect_answers": ["Arthur", "John", "Dominic"],
             "options": [
-                { id: 1, text: "Bilius", isCorrect: true },
-                { id: 2, text: "Arthur", isCorrect: false },
+                { id: 1, text: "Arthur", isCorrect: false },
+                { id: 2, text: "Bilius", isCorrect: true },
                 { id: 3, text: "John", isCorrect: false },
                 { id: 4, text: "Dominic", isCorrect: false },
             ]
@@ -62,10 +62,10 @@ const Question =
             //     "Robert%20Crumb"
             // ]
             "options": [
-                { id: 3, text: "Malcolm%20Wheeler-Nicholson", isCorrect: false },
-                { id: 1, text: "Robert%20Kirkman", isCorrect: true },
+                { id: 1, text: "Malcolm%20Wheeler-Nicholson", isCorrect: false },
                 { id: 2, text: "Stan%20Lee", isCorrect: false },
-                { id: 4, text: "Robert%20Crumb", isCorrect: false },
+                { id: 3, text: "Robert%20Crumb", isCorrect: false },
+                { id: 4, text: "Robert%20Kirkman", isCorrect: true },
             ]
         },
         {
@@ -76,9 +76,9 @@ const Question =
             // "correct_answer": "Electric%20Company",
             // "incorrect_answers": ["Water%20Works", "Chance", "Community%20Chest"]
             "options": [
-                { id: 2, text: "Water%20Works", isCorrect: false },
-                { id: 3, text: "Chance", isCorrect: false },
-                { id: 1, text: "Electric%20Company", isCorrect: true },
+                { id: 1, text: "Water%20Works", isCorrect: false },
+                { id: 2, text: "Chance", isCorrect: false },
+                { id: 3, text: "Electric%20Company", isCorrect: true },
                 { id: 4, text: "Community%20Chest", isCorrect: false },
             ]
         },
@@ -104,8 +104,8 @@ const Question =
             // "correct_answer": "1962",
             // "incorrect_answers": ["1492", "1963", "1987"]
             "options": [
-                { id: 1, text: "1962", isCorrect: true },
-                { id: 2, text: "1492", isCorrect: false },
+                { id: 1, text: "1492", isCorrect: false },
+                { id: 2, text: "1962", isCorrect: true },
                 { id: 3, text: "1963", isCorrect: false },
                 { id: 4, text: "1987", isCorrect: false },
             ]
@@ -118,8 +118,8 @@ const Question =
             // "correct_answer": "False",
             // "incorrect_answers": ["True"]
             "options": [
-                { id: 1, text: 'false', isCorrect: true },
-                { id: 2, text: 'true', isCorrect: false }
+                { id: 1, text: 'true', isCorrect: false },
+                { id: 2, text: 'false', isCorrect: true },
             ]
         },
         {

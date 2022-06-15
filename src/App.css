@@ -1,42 +1,48 @@
-h3{
+h3 {
   word-wrap: break-word;
 }
+
 .quizContainer {
   border: 1px solid gray;
   border-radius: 5px;
-  width: 80%;
+  width: 90%;
   margin: auto;
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 100px;
+}
+
+.quizContainer>h2 {
+  margin: 0px;
+  font-weight: 400;
+}
+
+.quizContainer>p {
+  font-size: 14px;
+  color: gray;
+  margin: 5px 0px;
 }
 
 .multiple_Choice {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .multiple_Choice>p {
   border: 1px solid rgb(51, 50, 50);
   background-color: whitesmoke;
-  width: 300px;
-  padding: 10px;
+  width: 400px;
+  padding: 5px 10px;
   margin-left: 20px;
   text-align: center;
+  font-size: 19px;
+  font-weight: 400;
 }
 
 .multiple_Choice>p:hover {
   background-color: black;
   color: white;
-}
-
-.logo {
-  display: flex;
-  justify-content: center;
-}
-
-.logo>img {
-  width: 200px;
 }
 
 .btn {
@@ -50,22 +56,58 @@ h3{
   padding: 10px;
 }
 
-.finalResult{
+.finalResult {
   border: 1px solid gray;
   width: 500px;
   margin: auto;
   text-align: center;
 }
-.finalResult > .btn{
+
+.finalResult>.btn {
   background-color: red;
   color: white;
   padding: 10px;
   font-size: 18px;
 }
-.score{
+
+.score {
   display: flex;
   justify-content: space-between;
 }
-.MuiLinearProgress-root{
+
+.MuiLinearProgress-root {
   height: 15px !important;
+}
+
+.multiple_choice_btn {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.multiple_choice_btn>button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.multiple_Choice>p[disabled] {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.correctText {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.inCorrectText {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.Question>p {
+  font-size: 20px;
 }
