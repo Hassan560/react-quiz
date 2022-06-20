@@ -5,12 +5,6 @@ const Question =
             "type": "multiple",
             "difficulty": "hard",
             "question": "What%20was%20the%20name%20of%20the%20hero%20in%20the%2080s%20animated%20video%20game%20%27Dragon%27s%20Lair%27%3F",
-            // "correct_answer": "Dirk%20the%20Daring",
-            // "incorrect_answers": [
-            //     "Arthur",
-            //     "Sir%20Toby%20Belch",
-            //     "Guy%20of%20Gisbourne"
-            // ],
             "options": [
                 { id: 1, text: "Arthur", isCorrect: false },
                 { id: 2, text: "Sir%20Toby%20Belch", isCorrect: false },
@@ -23,12 +17,6 @@ const Question =
             "type": "multiple",
             "difficulty": "easy",
             "question": "What%20is%20the%20scientific%20name%20for%20modern%20day%20humans%3F",
-            // "correct_answer": "Homo%20Sapiens",
-            // "incorrect_answers": [
-            //     "Homo%20Ergaster",
-            //     "Homo%20Erectus",
-            //     "Homo%20Neanderthalensis"
-            // ],
             "options": [
                 { id: 1, text: "Homo%20Sapiens", isCorrect: true },
                 { id: 2, text: "Homo%20Ergaster", isCorrect: false },
@@ -41,8 +29,6 @@ const Question =
             "type": "multiple",
             "difficulty": "hard",
             "question": "What%20is%20Ron%20Weasley%27s%20middle%20name%3F",
-            // "correct_answer": "Bilius",
-            // "incorrect_answers": ["Arthur", "John", "Dominic"],
             "options": [
                 { id: 1, text: "Arthur", isCorrect: false },
                 { id: 2, text: "Bilius", isCorrect: true },
@@ -55,12 +41,6 @@ const Question =
             "type": "multiple",
             "difficulty": "easy",
             "question": "Who%20is%20the%20creator%20of%20the%20comic%20series%20%22The%20Walking%20Dead%22%3F",
-            // "correct_answer": "Robert%20Kirkman",
-            // "incorrect_answers": [
-            //     "Stan%20Lee",
-            //     "Malcolm%20Wheeler-Nicholson",
-            //     "Robert%20Crumb"
-            // ]
             "options": [
                 { id: 1, text: "Malcolm%20Wheeler-Nicholson", isCorrect: false },
                 { id: 2, text: "Stan%20Lee", isCorrect: false },
@@ -73,8 +53,6 @@ const Question =
             "type": "multiple",
             "difficulty": "medium",
             "question": "At%20the%20start%20of%20a%20standard%20game%20of%20the%20Monopoly%2C%20if%20you%20throw%20a%20double%20six%2C%20which%20square%20would%20you%20land%20on%3F",
-            // "correct_answer": "Electric%20Company",
-            // "incorrect_answers": ["Water%20Works", "Chance", "Community%20Chest"]
             "options": [
                 { id: 1, text: "Water%20Works", isCorrect: false },
                 { id: 2, text: "Chance", isCorrect: false },
@@ -134,8 +112,8 @@ const Question =
             //     "%242.7%20Billion"
             // ]
             "options": [
-                { id: 1, text: "%2412.7%20Billion", isCorrect: true },
-                { id: 2, text: "%2495%20Million", isCorrect: false },
+                { id: 1, text: "%2495%20Million", isCorrect: false },
+                { id: 2, text: "%2412.7%20Billion", isCorrect: true },
                 { id: 3, text: "%24956%20Million", isCorrect: false },
                 { id: 4, text: "%242.7%20Billion", isCorrect: false },
             ]
@@ -148,10 +126,10 @@ const Question =
             // "correct_answer": "55",
             // "incorrect_answers": ["50", "60", "54"]
             "options": [
-                { id: 1, text: "55", isCorrect: true },
-                { id: 2, text: "50", isCorrect: false },
-                { id: 3, text: "60", isCorrect: false },
-                { id: 4, text: "54", isCorrect: false },
+                { id: 1, text: "50", isCorrect: false },
+                { id: 2, text: "60", isCorrect: false },
+                { id: 3, text: "54", isCorrect: false },
+                { id: 4, text: "55", isCorrect: true },
             ]
         },
         {
@@ -180,8 +158,8 @@ const Question =
             // "correct_answer": "True",
             // "incorrect_answers": ["False"]
             "options": [
-                { id: 1, text: 'true', isCorrect: true },
-                { id: 2, text: 'false', isCorrect: false }
+                { id: 1, text: 'false', isCorrect: false },
+                { id: 2, text: 'true', isCorrect: true },
             ]
         },
         {
@@ -192,8 +170,8 @@ const Question =
             // "correct_answer": "Coils",
             // "incorrect_answers": ["Wires", "Collectors", "Tesla"]
             "options": [
-                { id: 1, text: "Coils", isCorrect: true },
-                { id: 2, text: "Wires", isCorrect: false },
+                { id: 1, text: "Wires", isCorrect: false },
+                { id: 2, text: "Coils", isCorrect: true },
                 { id: 3, text: "Collectors", isCorrect: false },
                 { id: 4, text: "Tesla", isCorrect: false },
             ]
@@ -206,9 +184,9 @@ const Question =
             // "correct_answer": "Vanilla",
             // "incorrect_answers": ["Peach", "Strawberry", "Mint"]
             "options": [
-                { id: 1, text: "Vanilla", isCorrect: true },
-                { id: 2, text: "Peach", isCorrect: false },
-                { id: 3, text: "Strawberry", isCorrect: false },
+                { id: 1, text: "Peach", isCorrect: false },
+                { id: 2, text: "Strawberry", isCorrect: false },
+                { id: 3, text: "Vanilla", isCorrect: true },
                 { id: 4, text: "Mint", isCorrect: false },
             ]
         },
@@ -224,9 +202,9 @@ const Question =
             //     "Bangladesh%20and%20Bhutan"
             // ]
             "options": [
-                { id: 1, text: "Poland%20and%20Lithuania", isCorrect: true },
-                { id: 2, text: "Hutu%20and%20Rwanda", isCorrect: false },
-                { id: 3, text: "North%20Korea%20and%20South%20Korea", isCorrect: false },
+                { id: 1, text: "Hutu%20and%20Rwanda", isCorrect: false },
+                { id: 2, text: "North%20Korea%20and%20South%20Korea", isCorrect: false },
+                { id: 3, text: "Poland%20and%20Lithuania", isCorrect: true },
                 { id: 4, text: "Bangladesh%20and%20Bhutan", isCorrect: false },
             ]
         },
@@ -256,9 +234,9 @@ const Question =
             // "correct_answer": "Plastic%20Beach",
             // "incorrect_answers": ["Demon%20Days", "Humanz", "The%20Fall"]
             "options": [
-                { id: 1, text: "Plastic%20Beach", isCorrect: true },
-                { id: 2, text: "Demon%20Days", isCorrect: false },
-                { id: 3, text: "Humanz", isCorrect: false },
+                { id: 1, text: "Demon%20Days", isCorrect: false },
+                { id: 2, text: "Humanz", isCorrect: false },
+                { id: 3, text: "Plastic%20Beach", isCorrect: true },
                 { id: 4, text: "The%20Fall", isCorrect: false },
             ]
         },
@@ -286,10 +264,10 @@ const Question =
             //     "Blood%20Harvest"
             // ]
             "options": [
-                { id: 1, text: "No%20Mercy", isCorrect: true },
-                { id: 2, text: "Subway%20Sprint", isCorrect: false },
-                { id: 3, text: "Hospital%20Havoc", isCorrect: false },
-                { id: 4, text: "Blood%20Harvest", isCorrect: false },
+                { id: 1, text: "Subway%20Sprint", isCorrect: false },
+                { id: 2, text: "Hospital%20Havoc", isCorrect: false },
+                { id: 3, text: "Blood%20Harvest", isCorrect: false },
+                { id: 4, text: "No%20Mercy", isCorrect: true },
             ]
         },
         {
@@ -300,8 +278,8 @@ const Question =
             // "correct_answer": "Hong%20Kong",
             // "incorrect_answers": ["India", "Australia", "Ireland"]
             "options": [
-                { id: 1, text: "Hong%20Kong", isCorrect: true },
-                { id: 2, text: "India", isCorrect: false },
+                { id: 1, text: "India", isCorrect: false },
+                { id: 2, text: "Hong%20Kong", isCorrect: true },
                 { id: 3, text: "Australia", isCorrect: false },
                 { id: 4, text: "Ireland", isCorrect: false },
             ]
