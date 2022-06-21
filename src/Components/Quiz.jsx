@@ -16,7 +16,6 @@ import {
   QuizContainer,
   Title,
   Para,
-  Progress,
 } from "../Components/Styles/Quiz";
 
 const Quiz = () => {
@@ -75,8 +74,8 @@ const Quiz = () => {
           </div>
 
           <div className="progressbar">
-            {/* <Bar increaseScore={increaseScore} decreaseScore={decreaseScore} /> */}
-            <div
+            <Bar increaseScore={increaseScore} decreaseScore={decreaseScore} />
+            {/* <div
               className="fill"
               style={{
               background: `
@@ -85,7 +84,7 @@ const Quiz = () => {
               #000 56%)
             `,
               }}
-            />
+            /> */}
           </div>
         </div>
       </QuizContainer>
