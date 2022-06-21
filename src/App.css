@@ -1,12 +1,13 @@
 .multiple_Choice > p {
-  border: 1px solid rgb(51, 50, 50);
-  background-color: whitesmoke;
-  width: 400px;
-  padding: 5px 10px;
-  margin-left: 20px;
+  border: 1px solid gray;
+  background-color: #f0f0f0;
+  width: 40%;
+  padding: 8px 6px;
+  margin: 10px;
   text-align: center;
-  font-size: 19px;
-  font-weight: 400;
+  font-size: 16px;
+  overflow: hidden;
+  outline: none;
 }
 
 .multiple_Choice > p:hover {
@@ -40,7 +41,8 @@
 }
 
 .Question > p {
-  font-size: 20px;
+  font-size: 18px;
+  margin-top: 20px;
 }
 
 .progress {
@@ -50,4 +52,19 @@
   border-radius: 0px;
   transition-delay: 1ms !important;
   --bs-progress-bar-transition: 0.1s !important;
+}
+.progress__Container {
+  padding: 0px 5%;
+}
+.progressbar {
+  border: 1px solid #333;
+  border-radius: 5px;
+  height: 20px;
+  width: 100%;
+  position: relative;
+}
+.fill {
+  border-radius: inherit;
+  height: 100%;
+  transition: width 0.2s ease-in;
 }

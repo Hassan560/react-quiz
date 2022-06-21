@@ -18,7 +18,6 @@ const MultipleChoice = ({
   setCurrentQuestion,
   setIncreaseScore,
   increaseScore,
-  setFinalResult,
   setDecreaseScore,
   decreaseScore,
 }) => {
@@ -39,14 +38,15 @@ const MultipleChoice = ({
   };
 
   const nextQues = () => {
-    if (currentQuestion + 1 < Question.length) {
-      setCurrentQuestion(currentQuestion + 1);
-      setNextQuestion(false);
-      setCorrectText(false);
-      setIncorrectText(false);
-    } else {
-      setFinalResult(true);
-    }
+    setCurrentQuestion(currentQuestion + 1);
+    setNextQuestion(false);
+    setCorrectText(false);
+    setIncorrectText(false);
+  };
+
+  const finalQuiz = () => {
+    alert(increaseScore >= 60 ? "YOU WON 👍" : "YOU LOST 👎");
+    window.location.reload();
   };
 
   return (
@@ -61,7 +61,7 @@ const MultipleChoice = ({
                 onClick={() => handleClicked(elem.isCorrect)}
                 key={elem.id}
               >
-                {elem.text.replace(/%20|%2C|%/g, " ")}
+                {decodeURIComponent(elem.text)}
               </p>
             );
           })}
@@ -72,9 +72,17 @@ const MultipleChoice = ({
       <InCorrectTitle>{incorrectText ? "Sorry" : null}</InCorrectTitle>
 
       <ButtonContainer>
-        {nextQuestion ? (
-          <Button onClick={nextQues}>Next Question</Button>
-        ) : null}
+        {nextQuestion && (
+          <Button
+            onClick={
+              Question.length - 1 === currentQuestion ? finalQuiz : nextQues
+            }
+          >
+            {Question.length - 1 === currentQuestion
+              ? "Finish Check"
+              : "Next Question"}
+          </Button>
+        )}
       </ButtonContainer>
     </>
   );

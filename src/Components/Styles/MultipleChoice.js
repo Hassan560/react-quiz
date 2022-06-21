@@ -7,16 +7,20 @@ export const ChoiceWrapper = styled.div`
   margin-top: 30px;
 `;
 
-export const Para = styled.p`
-  border: 1px solid rgb(51, 50, 50);
-  background-color: whitesmoke;
-  width: 400px;
-  padding: 5px 10px;
-  margin-left: 20px;
-  text-align: center;
-  font-size: 19px;
-  font-weight: 400;
-`;
+// export const Para = styled.p`
+//   border: 1px solid gray;
+//   background-color: whitesmoke;
+//   width: 40%;
+//   /* padding: 5px 10px; */
+//   /* margin-left: 20px; */
+//   text-align: center;
+//   font-size: 19px;
+//   font-weight: 400;
+//   margin: 10px;
+//   outline: none;
+//   overflow: hidden;
+//   padding: 10px 6px;
+// `;
 
 export const ButtonContainer = styled.div`
   text-align: center;

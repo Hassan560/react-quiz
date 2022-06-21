@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const QuizContainer = styled.div`
-  border: 1px solid gray;
+  box-shadow: 0px 0px 1px 0px #000000bf;
   border-radius: 5px;
-  width: 90%;
-  margin: auto;
-  padding: 20px;
-  margin-top: 100px;
+  width: 60%;
+  margin: 5rem auto;
+  padding: 10px;
 `;
 export const Title = styled.h2`
   margin: 10px 0px 5px;
