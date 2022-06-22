@@ -56,15 +56,3 @@
 .progress__Container {
   padding: 0px 5%;
 }
-.progressbar {
-  border: 1px solid #333;
-  border-radius: 5px;
-  height: 20px;
-  width: 100%;
-  position: relative;
-}
-.fill {
-  border-radius: inherit;
-  height: 100%;
-  transition: width 0.2s ease-in;
-}

@@ -1,89 +1,44 @@
 import React from "react";
 
-import Question from "../Data";
-
 import "../App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-import {
-  Button,
-  ButtonContainer,
-  ChoiceWrapper,
-  CorrectTitle,
-  InCorrectTitle,
-} from "./Styles/MultipleChoice";
+import { ChoiceWrapper } from "./Styles/MultipleChoice";
 
-const MultipleChoice = ({
-  currentQuestion,
-  setCurrentQuestion,
-  setIncreaseScore,
-  increaseScore,
-  setDecreaseScore,
-  decreaseScore,
-}) => {
-  const [nextQuestion, setNextQuestion] = useState(false);
-  const [correctText, setCorrectText] = useState(null);
-  const [incorrectText, setIncorrectText] = useState(null);
+const MultipleChoice = ({ correctText, handleClicked, question }) => {
+  const [multipleAnswer, setMultipleAnswer] = useState([]);
 
-  const handleClicked = (isCorrect) => {
-    if (isCorrect) {
-      setIncreaseScore(increaseScore + 1);
-      setNextQuestion(true);
-      setCorrectText(true);
-    } else {
-      setDecreaseScore(decreaseScore - 1);
-      setNextQuestion(true);
-      setIncorrectText(true);
+  function shuffleArray(array) {
+    let i = array.length - 1;
+    for (; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
     }
-  };
+    return array;
+  }
 
-  const nextQues = () => {
-    setCurrentQuestion(currentQuestion + 1);
-    setNextQuestion(false);
-    setCorrectText(false);
-    setIncorrectText(false);
-  };
-
-  const finalQuiz = () => {
-    alert(increaseScore >= 60 ? "YOU WON 👍" : "YOU LOST 👎");
-    window.location.reload();
-  };
+  useEffect(() => {
+    question.incorrect_answers.push(question.correct_answer);
+    let answer = shuffleArray(question.incorrect_answers);
+    setMultipleAnswer(answer);
+    console.log(answer);
+  }, [question]);
 
   return (
     <>
       <ChoiceWrapper className="multiple_Choice">
-        {Question[currentQuestion].options
-          .sort(() => Math.random() - 0.5)
-          .map((elem) => {
-            return (
-              <p
-                disabled={nextQuestion ? true : false}
-                onClick={() => handleClicked(elem.isCorrect)}
-                key={elem.id}
-              >
-                {decodeURIComponent(elem.text)}
-              </p>
-            );
-          })}
-      </ChoiceWrapper>
-
-      <CorrectTitle>{correctText ? "Correct" : null}</CorrectTitle>
-
-      <InCorrectTitle>{incorrectText ? "Sorry" : null}</InCorrectTitle>
-
-      <ButtonContainer>
-        {nextQuestion && (
-          <Button
-            onClick={
-              Question.length - 1 === currentQuestion ? finalQuiz : nextQues
-            }
+        {multipleAnswer?.map((elem, index) => (
+          <p
+            key={index}
+            disabled={correctText ? true : false}
+            onClick={() => handleClicked(elem)}
           >
-            {Question.length - 1 === currentQuestion
-              ? "Finish Check"
-              : "Next Question"}
-          </Button>
-        )}
-      </ButtonContainer>
+            {decodeURIComponent(elem)}
+          </p>
+        ))}
+      </ChoiceWrapper>
     </>
   );
 };
