@@ -5,7 +5,6 @@ import "../App.css";
 import StarRateIcon from "@mui/icons-material/StarRate";
 
 const Star = ({ starLevel }) => {
-  
   let blackStars = 0;
   if (starLevel === 1) {
     blackStars = 4;

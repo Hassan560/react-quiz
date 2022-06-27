@@ -1,4 +1,4 @@
-.multiple_Choice > p {
+/* .quizOptions > p {
   border: 1px solid gray;
   background-color: #f0f0f0;
   width: 40%;
@@ -10,7 +10,7 @@
   outline: none;
 }
 
-.multiple_Choice > p:hover {
+.quizOptions > p:hover {
   background-color: black;
   color: white;
 }
@@ -35,7 +35,7 @@
   height: 15px !important;
 }
 
-.multiple_Choice > p[disabled] {
+.quizOptions > p[disabled] {
   pointer-events: none;
   opacity: 0.7;
 }
@@ -55,4 +55,70 @@
 }
 .progress__Container {
   padding: 0px 5%;
+} */
+
+/* quiz container css */
+.quizContainer {
+  width: 60%;
+  box-shadow: 0px 0px 1px 0px rgb(0 0 0 / 75%);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5rem auto;
+}
+/* quiz option css */
+.quizOptions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 30px;
+}
+.quizOptions > p {
+  border: 1px solid gray;
+  background-color: #f0f0f0;
+  width: 40%;
+  padding: 8px 6px;
+  margin: 10px;
+  text-align: center;
+  font-size: 16px;
+  overflow: hidden;
+  outline: none;
+}
+.quizOptions > p:hover {
+  background-color: black;
+  color: white;
+}
+.quizOptions > p[disabled] {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* progress bar css */
+.progress__Container {
+  padding: 0px 5%;
+}
+.progress {
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  --bs-progress-bar-bg: #808080;
+  height: 27px;
+  border-radius: 0px;
+  transition-delay: 1ms !important;
+  --bs-progress-bar-transition: 0.1s !important;
+}
+.score {
+  display: flex;
+  justify-content: space-between;
+}
+.progressbar {
+  position: relative;
+  height: 20px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #333;
+}
+.filler {
+  height: 100%;
+  border-radius: inherit;
+  transition: width 0.2s ease-in;
 }
