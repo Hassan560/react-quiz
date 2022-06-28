@@ -8,10 +8,10 @@ export const QuizTitle = styled.h2`
 export const QuizPara = styled.p`
     color: gray;,
     font-size: 12px;,
-    /* margin: 0px; */
 `;
 
 export const Question = styled.h5`
   font-size: 18px;
   font-weight: normal;
+  margin-top: 10px;
 `;

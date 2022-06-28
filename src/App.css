@@ -63,3 +63,22 @@
   border-radius: inherit;
   transition: width 0.2s ease-in;
 }
+@media only screen and (max-width: 900px) {
+  .quizOptions {
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+  }
+  .quizOptions > p {
+    width: 100%;
+    margin: 7px 0px;
+  }
+  .quizContainer {
+    width: 95%;
+    margin: 1rem auto;
+  }
+  .progress__Container{
+    padding: 0px;
+    margin-top: 10px;
+  }
+}
