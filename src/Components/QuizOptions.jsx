@@ -9,8 +9,8 @@ const QuizOptions = ({ question, handleClicked, nextQuestion }) => {
   useEffect(() => {
     const arr1 = question.incorrect_answers;
     const arr2 = question.correct_answer;
-    const final = arr1.concat(arr2);
-    setAnswerOption(final);
+    const final = arr1.concat(arr2)
+    setAnswerOption(final.sort(() => Math.random() - 0.5))
   }, [question]);
 
   return (
