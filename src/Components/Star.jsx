@@ -15,7 +15,7 @@ const Star = ({ starLevel }) => {
   }
 
   return (
-    <div>
+    <>
       {Array(starLevel)
         .fill()
         .map((_, index) => (
@@ -28,7 +28,7 @@ const Star = ({ starLevel }) => {
             <StarRateIcon sx={{ fontSize: "14px" }} />
           </span>
         ))}
-    </div>
+    </>
   );
 };
 
