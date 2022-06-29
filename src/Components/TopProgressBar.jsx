@@ -1,5 +1,4 @@
 import React from 'react'
-
 // progress bar bootstrap
 import { ProgressBar } from 'react-bootstrap'
 
