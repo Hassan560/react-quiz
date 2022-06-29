@@ -4,7 +4,7 @@ import React from "react";
 import Star from "../Star";
 
 // quizheadercss 
-import { Question, QuizPara, QuizTitle } from './QuizHeaderCss'
+import { Question, QuizPara, QuizTitle } from './Style/Index'
 
 const QuizHeader = ({ question, questionNumber, totalQues }) => {
   // star funtionality

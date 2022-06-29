@@ -7,10 +7,10 @@ const QuizOptions = ({ question, handleClicked, nextQuestion }) => {
   const [answerOption, setAnswerOption] = useState([]);
 
   useEffect(() => {
-    const arr1 = question.incorrect_answers;
-    const arr2 = question.correct_answer;
-    const final = arr1.concat(arr2)
-    setAnswerOption(final.sort(() => Math.random() - 0.5))
+    const incorrectAnswers = question.incorrect_answers;
+    const correctAnswer = question.correct_answer;
+    const finalAnswer = incorrectAnswers.concat(correctAnswer);
+    setAnswerOption(finalAnswer.sort(() => Math.random() - 0.5));
   }, [question]);
 
   return (

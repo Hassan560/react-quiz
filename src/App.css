@@ -1,11 +1,3 @@
-/* quiz container css */
-.quizContainer {
-  width: 60%;
-  box-shadow: 0px 0px 1px 0px rgb(0 0 0 / 75%);
-  padding: 10px;
-  border-radius: 5px;
-  margin: 5rem auto;
-}
 /* quiz option css */
 .quizOptions {
   display: flex;
@@ -37,7 +29,9 @@
 .progress__Container {
   padding: 0px 5%;
 }
-.progress {
+
+/* top progressbar css */
+.progress{
   position: sticky;
   top: 0px;
   background-color: white;
@@ -47,22 +41,7 @@
   transition-delay: 1ms !important;
   --bs-progress-bar-transition: 0.1s !important;
 }
-.score {
-  display: flex;
-  justify-content: space-between;
-}
-.progressbar {
-  position: relative;
-  height: 20px;
-  width: 100%;
-  border-radius: 5px;
-  border: 1px solid #333;
-}
-.filler {
-  height: 100%;
-  border-radius: inherit;
-  transition: width 0.2s ease-in;
-}
+
 @media only screen and (max-width: 900px) {
   .quizOptions {
     flex-direction: column;
@@ -72,10 +51,6 @@
   .quizOptions > p {
     width: 100%;
     margin: 7px 0px;
-  }
-  .quizContainer {
-    width: 95%;
-    margin: 1rem auto;
   }
   .progress__Container{
     padding: 0px;

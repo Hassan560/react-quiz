@@ -1,18 +1,22 @@
 import React from "react";
 
-// custom css
-import "../App.css";
+// BottomProgressBar css
+import {
+  ScoreContainer,
+  FillerProgressBar,
+  ProgressBarContainer,
+} from "./Style/Index";
 
 const BottomProgressBar = ({ minimumScore, maximumScore, percentage }) => {
   return (
     <>
-      <div className="score">
+      <ScoreContainer>
         <p>Score: {parseFloat(percentage).toFixed(0)}%</p>
         <p>Max Score: {parseFloat(maximumScore).toFixed(0)}%</p>
-      </div>
-      <div className="progressbar">
-        <div
-          className="filler"
+      </ScoreContainer>
+
+      <ProgressBarContainer>
+        <FillerProgressBar
           style={{
             background: `
                 linear-gradient(
@@ -25,7 +29,7 @@ const BottomProgressBar = ({ minimumScore, maximumScore, percentage }) => {
                     #FFFFFF 0)`,
           }}
         />
-      </div>
+      </ProgressBarContainer>
     </>
   );
 };
