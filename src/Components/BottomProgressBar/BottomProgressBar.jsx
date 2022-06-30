@@ -12,6 +12,7 @@ const BottomProgressBar = ({ minimumScore, maximumScore, percentage }) => {
     <>
       <ScoreContainer>
         <p>Score: {parseFloat(percentage).toFixed(0)}%</p>
+        {/* <p>Score: {minimumScore}%</p> */}
         <p>Max Score: {parseFloat(maximumScore).toFixed(0)}%</p>
       </ScoreContainer>
 

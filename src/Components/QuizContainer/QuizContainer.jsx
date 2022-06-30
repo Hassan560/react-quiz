@@ -36,12 +36,12 @@ const QuizContainer = () => {
     if (e === questions[questionNumber].correct_answer) {
       setCorrectFeedback(true);
       setMinimumScore(((noOfCorrectAnswer + 1) / questions.length) * 100);
-      setPercentage(((noOfCorrectAnswer + 1) / (correctAns + 1)) * 100);
       setMaximumScore(
         ((noOfCorrectAnswer + 1 + (questions.length - (correctAns + 1))) /
           questions.length) *
           100
       );
+      setPercentage(((noOfCorrectAnswer + 1) / (correctAns + 1)) * 100);
       setNoOfCorrectAnswer(noOfCorrectAnswer + 1);
     } else {
       setCorrectFeedback(false);
@@ -85,7 +85,9 @@ const QuizContainer = () => {
           handleClicked={handleClicked}
           showNextQuestion={showNextQuestion}
         />
-        {showNextQuestion && <Text> {correctFeedback ? "correct" : "wrong"}</Text>}
+        {showNextQuestion && (
+          <Text> {correctFeedback ? "correct" : "wrong"}</Text>
+        )}
         <ButtonContainer>
           {showNextQuestion && (
             <Button

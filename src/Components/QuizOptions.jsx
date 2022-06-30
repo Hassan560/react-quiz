@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 // custom css
 import "../App.css";
 
-const QuizOptions = ({ question, handleClicked, nextQuestion }) => {
+const QuizOptions = ({ question, handleClicked, showNextQuestion }) => {
   const [answerOption, setAnswerOption] = useState([]);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const QuizOptions = ({ question, handleClicked, nextQuestion }) => {
       {answerOption.map((elem) => (
         <p
           key={elem}
-          disabled={nextQuestion}
+          disabled={showNextQuestion}
           onClick={() => handleClicked(elem)}
         >
           {decodeURIComponent(elem)}
